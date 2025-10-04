@@ -1,0 +1,43 @@
+@mixin centerEL {
+    display: flex;
+    flex-direction: column;
+}
+
+$inputbgColor : rgb(32 ,47, 54, 1);
+$placeholderColor: rgba(225, 225, 225, 1);
+$secondryBorder:rgb(27, 168, 235);
+
+.InputBox{
+    @include centerEL();
+    width: 395px;
+}
+
+input{
+    @include centerEL();
+    flex-direction: column;
+    color: $placeholderColor;
+    background-color: $inputbgColor;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 7px;
+    font-size: 18px;
+    border: solid 2px #37464f;
+}
+input::placeholder{
+    color:$placeholderColor; 
+}
+ 
+input:focus {
+    border: 2px solid $secondryBorder;
+     outline: none;
+}
+
+@media (max-width:700px) {
+    .InputBox{
+        width: 100%;
+    }
+    input{
+        width: 95%;
+        margin-left: 2%;
+    }
+}

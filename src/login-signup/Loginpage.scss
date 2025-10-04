@@ -1,0 +1,169 @@
+@import "./InputBox.scss";
+@import './LoginPageBtn.scss';
+
+@mixin mk-columnEL {
+  display: flex;
+  flex-direction: column;
+}
+
+
+$bgColor : rgba(19, 31, 36, 1);
+$headerColor : rgba(241, 247, 251, 1);
+$footerTextColor : rgb(81, 100 , 108);
+$btnSecondery:rgb(73, 192, 248);
+$secondryBorder:rgb(27, 168, 235);
+$btnFontColor: rgb(67, 173, 223);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow :hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: $bgColor;    
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color:$footerTextColor ;
+}
+
+
+.container {
+    @include mk-columnEL();
+}
+
+header {
+    display: flex;
+    margin: 30px 30px 0 30px;
+    justify-content: space-between;
+    img{
+        width:25px ;
+    }
+}
+
+
+
+.form-wrapper {
+    @include mk-columnEL();
+    justify-content: center;   
+    align-items: center;       
+    height: 80vh;              
+    width: 100%;                
+}
+
+form{
+    @include mk-columnEL();
+    align-items: center;
+    justify-content: center;
+    width: 410px;
+    padding: 16px;
+}
+
+h1 {
+    color: $headerColor;
+    font-size: 26px;
+    margin: 10px 0 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.loginbtn {
+    width: 380px;
+    height:45px;
+    background-color: $btnSecondery;
+    border: 1px solid $secondryBorder;
+    box-shadow:0 3px $secondryBorder ;
+    margin: 20px 0;
+}
+//////////////////////////////////////////////////
+/// dont work
+.or-separator {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  .line {
+    flex: 1;
+    height: 10px;
+    background-color: #ccc;
+  }
+
+  span {
+    margin: 0 10px;
+    color: #555;
+    font-weight: bold;
+  }
+}
+
+/////////////////////////////////////////////////
+/// 
+.account{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.accountbtn{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    background-color: $bgColor;
+    align-items: center;
+    padding: 13px 0;
+    margin: 10px 10px  0 10px;
+    color: $btnFontColor;
+    img{
+        width:20px;
+        margin-right: 3px;
+    }
+}
+
+.footer-text {
+    color:$footerTextColor ;
+    font-size: 15px;
+    width: 380px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 25px;
+    
+}
+.botton-text {
+    padding: 5px;
+    margin:  100px 10px 10px 10px;
+}
+.botton-last-text {
+    margin-top:20px ;
+}
+
+
+@media(max-width: 700px){
+    
+    form{
+        width: 100%;
+    }
+
+    .loginbtn {
+        width:95%;
+        margin-right: 2%;
+    }
+    .account {
+        width: 100%;
+    }
+    .accountbtn{
+        width: 95%;
+        margin: 0 7px;
+    }
+    .footer-text{
+        width: 95%;
+    }
+    .closeIcon{
+        position: fixed;
+        right: 50px;
+    }
+}  
