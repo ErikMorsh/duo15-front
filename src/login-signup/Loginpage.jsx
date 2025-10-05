@@ -1,12 +1,16 @@
 
+// import { useNavigate } from "react-router-dom";
 import '../login-signup/Loginpage.scss'
 import SignupRsponseBtn from './SignupResponse'
+import InputBox from './inputBox';
+// import { Link } from "react-router-dom"
 import closeIcon from './image/close.svg'
 import googleIcon from './image/google.svg'
 import facebookIcon from './image/facebook.svg'
 
 
 export default function  Loginpage(){
+    // const navigate = useNavigate();
     return(
         <div className='container'>
 
@@ -23,15 +27,12 @@ export default function  Loginpage(){
                 <form>
                     <h1 >Login</h1>
 
-                    <div className='InputBox'>     
-                        <input type="text"
-                        placeholder='Email or username' />
-
-                        <input type="text"
-                        placeholder='Password' />
-                    </div>
-
-                    <button className='loginbtn'>LOG IN</button>
+                        
+                        <InputBox/>
+        
+                         
+                        {/* <button onClick={() => navigate("/signup")}>Go to Sign Up</button> */}
+                        
                    
                     <div className="or-separator">
                         <div className="line"></div>

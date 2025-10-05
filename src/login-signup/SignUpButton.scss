@@ -1,15 +1,15 @@
-@import './LoginPageBtn.scss';
-@import './Loginpage.scss';
+@use './LoginPageBtn.scss';
+@use './Loginpage.scss';
 $btnFontColor: rgb(67, 173, 223);
 $primarybtnFontColor: rgb(225, 225, 225);
 $bgColor : rgb(17, 28, 32);
 
-.signup-container {
-//   display: flex;
-//   justify-content: center; /* وسط صفحه */
-//   align-items: center;
-//   margin-top: 50px;
-}
+// .signup-container {
+// //   display: flex;
+// //   justify-content: center; /* وسط صفحه */
+// //   align-items: center;
+// //   margin-top: 50px;
+// }
 
 .signup-button{
     padding: 15px 17px;

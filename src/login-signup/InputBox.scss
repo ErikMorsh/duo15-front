@@ -6,23 +6,28 @@
 $inputbgColor : rgb(32 ,47, 54, 1);
 $placeholderColor: rgba(225, 225, 225, 1);
 $secondryBorder:rgb(27, 168, 235);
+$lightgray : #37464f;
+$forgetColor :rgb(82, 101, 109);
 
-.InputBox{
-    @include centerEL();
-    width: 395px;
+
+.input-container {
+    // @include centerEL();
+    position: relative;
+    
 }
 
-input{
-    @include centerEL();
-    flex-direction: column;
+.usernameInput, .passwordInput{
     color: $placeholderColor;
     background-color: $inputbgColor;
     border-radius: 10px;
     padding: 12px;
     margin: 7px;
     font-size: 18px;
-    border: solid 2px #37464f;
+    border: solid 2px $lightgray;
+    width: 380px;
 }
+
+
 input::placeholder{
     color:$placeholderColor; 
 }
@@ -32,6 +37,20 @@ input:focus {
      outline: none;
 }
 
+.input-wrapper {
+    display: flex;
+    // position: absolute;
+    
+    img {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 20px;
+        
+    }
+}
+
+
 @media (max-width:700px) {
     .InputBox{
         width: 100%;
@@ -39,5 +58,24 @@ input:focus {
     input{
         width: 95%;
         margin-left: 2%;
+    }
+}
+
+
+// Forget link in password input
+
+.forgrt-link {
+    position: absolute;
+    right: 20px;
+    top: 95px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: color 0.2s ease;
+    color: $forgetColor;
+
+    &:hover {
+        color: white;
     }
 }

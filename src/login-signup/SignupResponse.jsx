@@ -1,7 +1,5 @@
-// SignUpButton.jsx
+
 import "./SignUpButton.scss";
-
-
 
 
 export default function SignButton() {

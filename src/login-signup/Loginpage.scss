@@ -1,5 +1,5 @@
-@import "./InputBox.scss";
-@import './LoginPageBtn.scss';
+@use "./InputBox.scss";
+@use './LoginPageBtn.scss';
 
 @mixin mk-columnEL {
   display: flex;
@@ -13,6 +13,8 @@ $footerTextColor : rgb(81, 100 , 108);
 $btnSecondery:rgb(73, 192, 248);
 $secondryBorder:rgb(27, 168, 235);
 $btnFontColor: rgb(67, 173, 223);
+$btnloginhiveer : rgb(80, 211, 255);
+$accountBtnColor : rgb(18, 28, 32);
 
 
 *{
@@ -45,10 +47,9 @@ header {
     justify-content: space-between;
     img{
         width:25px ;
+        cursor: pointer
     }
 }
-
-
 
 .form-wrapper {
     @include mk-columnEL();
@@ -81,6 +82,10 @@ h1 {
     border: 1px solid $secondryBorder;
     box-shadow:0 3px $secondryBorder ;
     margin: 20px 0;
+    transition: backgroundColor 0.3s ease;
+    &:hover {
+        background-color:$btnloginhiveer;
+    }
 }
 //////////////////////////////////////////////////
 /// dont work
@@ -118,9 +123,13 @@ h1 {
     padding: 13px 0;
     margin: 10px 10px  0 10px;
     color: $btnFontColor;
+    transition: background 0.3s ease;
     img{
         width:20px;
         margin-right: 3px;
+    }
+    &:hover{
+        background-color: $accountBtnColor;
     }
 }
 
