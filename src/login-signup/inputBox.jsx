@@ -19,40 +19,40 @@ export default function InputWithLink() {
 
   return (
     <div className="input-container">
-      <div className="input-wrapper">
-        <input
-          type="text"
-          placeholder="Email or username"
-          className="usernameInput"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-        />
-        {value && (
-          <img
-            src={closeIcon}
-            alt="clear"
-            className="clear-icon"
-            onClick={handleClear}
-          />
-        )}
-      </div>
+       <div className="input-wrapper">
+         <input
+           type="text"
+           placeholder="Email or username"
+           className="userNameInput"
+           value={value}
+           onChange={(e) => setValue(e.target.value)}
+         />
+         {value && (
+           <img
+             src={closeIcon}
+             alt="clear"
+             className="clear-icon"
+             onClick={handleClear}
+           />
+         )}
+       </div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        className="passwordInput"
-      />
+       <input
+         type="password"
+         placeholder="Password"
+         className="passwordInput"
+       />
 
-      <a
-        href="./"
-        className="forgrt-link"
-        onClick={(e) => {
-          e.preventDefault();
-          handleForgetClick();
-        }}
-      >
-        FORGET?
-      </a>
+       <a
+         href="./"
+         className="forgrt-link"
+         onClick={(e) => {
+           e.preventDefault();
+           handleForgetClick();
+         }}
+       >
+         FORGET?
+       </a>
     </div>
   );
 }

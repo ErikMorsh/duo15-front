@@ -4,60 +4,73 @@ $btnFontColor: rgb(67, 173, 223);
 $primarybtnFontColor: rgb(225, 225, 225);
 $bgColor : rgb(17, 28, 32);
 
-// .signup-container {
-// //   display: flex;
-// //   justify-content: center; /* وسط صفحه */
-// //   align-items: center;
-// //   margin-top: 50px;
-// }
 
-.signup-button{
-    padding: 15px 17px;
-    color: $btnFontColor;
-    font-weight: 900;
-    &:hover {
-      background-color: $bgColor;
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .signup-text {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+
+    p {
+      color: $primarybtnFontColor;
+      margin: 0;
+      margin-right: 8px;
+    }
+
+    span {
+      color: $btnFontColor;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-weight: 900;
+      color: $btnFontColor;
+      
       cursor: pointer;
       transition: background 0.3s ease;
-    }
-}
 
-
-/* متن مخفی در حالت دسکتاپ */
-  .signup-text {
-    display: none; 
-    font-size: 18px;
-    span{
-        color: $btnFontColor;
-    }
-    p {
-        color:$primarybtnFontColor ;
+      &:hover {
+        background-color: $bgColor;
+      }
     }
   }
+}
 
 
 @media (max-width: 700px) {
   .signup-container {
-    display: flex;
-    margin-top: 20px;
-
-    .signup-button {
-      display: none; 
-    }
-
     .signup-text {
-      display: flex; 
-      position: fixed;       
-      bottom: 80px;          
-      left: 50%;             
+      position: fixed;
+      bottom: 20%;
+      left: 50%;
       transform: translateX(-50%);
+      flex-direction: column;
+      text-align: center;
       font-size: 15px;
-      font-weight: bold;
-      
 
-      span a{
-        margin-left: 7px;
-        color: $btnFontColor;
+    }
+  }
+}
+
+
+@media (min-width: 701px) {
+  .signup-container {
+    .signup-text {
+      p, span {
+        display: none; 
+      }
+
+      button {
+        display: inline-block; 
       }
     }
   }

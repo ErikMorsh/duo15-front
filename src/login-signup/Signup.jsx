@@ -1,10 +1,11 @@
 import closeIcon from './image/close.svg'
-import '../login-signup/Loginpage.scss'
-import SignupRsponseBtn from './SignupResponse'
-import AgeSignInput from './ageSignInput'
-import InputBox from './inputBox';
+// import '../login-signup/Loginpage.scss'
+import AgeSignInput from './AgeSignInput'
+import { useNavigate } from 'react-router-dom'
+import CaptionText from './CaptionText'
 
 export default function Signup(){
+    const navigate = useNavigate();
     return(
         <div className='container'>
 
@@ -13,7 +14,7 @@ export default function Signup(){
                 <img src={closeIcon} alt="close"/>
                 </section> 
                 
-                <SignupRsponseBtn/>
+                <button onClick={() => navigate("/Loginpage")}>LOGIN</button>
             </header>
 
             <div className="form-wrapper">
@@ -23,8 +24,13 @@ export default function Signup(){
                     <h1>How old are you?</h1>
 
                     <AgeSignInput/>
+
+                    
+                
+                    
                 </form>
 
+                <CaptionText/>
             </div>
 
         </div>

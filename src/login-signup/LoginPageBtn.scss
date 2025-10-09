@@ -1,6 +1,6 @@
 $bgColor : rgba(19, 31, 36, 1);
 $btnBorderColor : rgba(50, 63 ,71, 1);
-
+$btnFontColor: rgb(67, 173, 223);
 
 button {
     font-weight: 800;
@@ -10,4 +10,5 @@ button {
     box-shadow:0 2px $btnBorderColor ;
     background-color: $bgColor;
     text-align: center;
+    color: $btnFontColor;
 }
