@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import closeIcon from "./image/close2.svg";
 import "./InputBox.scss";
 import { useState } from "react";
+import closeIcon from "./image/close2.svg";
 
 
 

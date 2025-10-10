@@ -41,10 +41,6 @@ export default function  Loginpage(){
                    <CaptionText/>
 
             </div>
-
-
-
-
         </div>
     );
 }

@@ -1,9 +1,9 @@
 import '../login-signup/Loginpage.scss'
-import closeIcon from "./image/close2.svg";
 import "./AgeSubmit.scss";
 import "./InputBox.scss";
 import { useState } from "react";
 import AccountBtn from "./AccountBtn";
+import closeIcon from "./image/close2.svg";
 
 
 export default function AgeSignInput() {

@@ -1,8 +1,5 @@
 @use "./InputBox.scss";
 @use './LoginPageBtn.scss';
-
-
-
 $bgColor : rgba(19, 31, 36, 1);
 $headerColor : rgba(241, 247, 251, 1);
 $footerTextColor : rgb(81, 100 , 108);
@@ -11,25 +8,26 @@ $secondryBorder:rgb(27, 168, 235);
 $btnFontColor: rgb(67, 173, 223);
 $btnloginhiveer : rgb(80, 211, 255);
 $accountBtnColor : rgb(18, 28, 32);
+$blackColor: rgb(0,0,0);
 
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    overflow :hidden;
-    height: 100vh;
-    width: 100%;
-    background-color: $bgColor;    
+  overflow :hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: $bgColor;    
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
-    color:$footerTextColor ;
+  text-decoration: none;
+  cursor: pointer;
+  color:$footerTextColor ;
 }
 
 .container {
@@ -37,64 +35,62 @@ a {
   flex-direction: column;
 }
 .signup-text span , p{
-    font-size: 15px;
-    margin-right: 4px;
+  font-size: 15px;
+  margin-right: 4px;
 }
 
 header {
-    display: flex;
-    margin: 30px 30px 0 30px;
-    justify-content: space-between;
-    
-    img{
-        width:25px ;
-        cursor: pointer
-    }
-    button{
-        padding: 13px;
-        font-size: 15px
-        
-    }
+  display: flex;
+  margin: 30px 30px 0 30px;
+  justify-content: space-between;
+  
+  img{
+      width:25px ;
+      cursor: pointer
+  }
+  button{
+      padding: 13px;
+      font-size: 15px  
+  }
 }
 
 .form-wrapper {
-    display: flex;
+  display: flex;
   flex-direction: column;
-    justify-content: center;   
-    align-items: center;       
-    height: 80vh;              
-    width: 100%;                
+  justify-content: center;   
+  align-items: center;       
+  height: 80vh;              
+  width: 100%;                
 }
 
 form{
-    display: flex;
+  display: flex;
   flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 410px;
-    padding: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 410px;
+  padding:  16px;
 }
 
 h1 {
-    color: $headerColor;
-    font-size: 26px;
-    margin: 10px 0 15px;
-    text-align: center;
-    font-weight: 700;
+  color: $headerColor;
+  font-size: 26px;
+  margin: 10px 0 15px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .loginbtn {
-    width: 380px;
-    height:45px;
-    color: black;
-    background-color: $btnSecondery;
-    border: 1px solid $secondryBorder;
-    box-shadow:0 3px $secondryBorder ;
-    margin: 20px 0;
-    transition: backgroundColor 0.3s ease;
-    &:hover {
-        background-color:$btnloginhiveer;
-    }
+  width: 380px;
+  height:45px;
+  color: $blackColor;
+  background-color: $btnSecondery;
+  border: 1px solid $secondryBorder;
+  box-shadow:0 3px $secondryBorder ;
+  transition: backgroundColor 0.3s ease;
+  &:hover {
+      background-color:$btnloginhiveer;
+  }
 }
 //////////////////////////////////////////////////
 /// dont work
@@ -119,43 +115,44 @@ h1 {
 /////////////////////////////////////////////////
 /// 
 .account{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
 }
 .accountbtn{
-    width: 180px;
-    display: flex;
-    justify-content: center;
-    background-color: $bgColor;
-    align-items: center;
-    padding: 13px 0;
-    margin: 10px 10px  0 10px;
-    transition: background 0.3s ease;
-    img{
-        width:20px;
-        margin-right: 3px;
-    }
-    &:hover{
-        background-color: $accountBtnColor;
-    }
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  background-color: $bgColor;
+  align-items: center;
+  padding: 13px 0;
+  margin: 10px 10px  0 10px;
+  transition: background 0.3s ease;
+  img{
+      width:20px;
+      margin-right: 3px;
+  }
+  &:hover{
+      background-color: $accountBtnColor;
+  }
 }
 
 .footer-text {
-    color:$footerTextColor ;
-    font-size: 15px;
-    width: 380px;
-    text-align: center;
-    line-height: 20px;
-    margin-top: 25px;
-    
+  color:$footerTextColor ;
+  font-size: 15px;
+  width: 380px;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 25px;
 }
+
 .botton-text {
-    padding: 5px;
-    margin:  100px 10px 10px 10px;
+  padding: 5px;
+  margin:  100px 10px 10px 10px;
 }
+
 .botton-last-text {
-    margin-top:20px ;
+  margin-top:20px ;
 }
 
 
