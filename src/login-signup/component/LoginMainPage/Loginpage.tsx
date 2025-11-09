@@ -10,17 +10,17 @@ import LoginBtn from '../LoginBtn/LoginBtn';
 import { useState } from 'react';
 
 
-
 export default function  Loginpage(){
 
     const [username, setUsername] = useState('')
     const [password, setpassword] = useState('')   
     
-    const handleLogin = async ()=>{
+    const handleLogin = async (e)=>{
+        e.preventDefault()
         try{
-            const res = await loginUser({username, password});
+            const res = await loginUser({username, phone: password});
             console.log('Responsive: ' , res);
-            localStorage.setItem('token: ', res.token) 
+            localStorage.setItem('token: ', res.data) 
         }catch (err) {
         console.error('Login failed:', err);
     }
@@ -49,7 +49,8 @@ export default function  Loginpage(){
                         setpassword={setpassword}
                         />
                         
-                        <LoginBtn onClick={handleLogin}/>
+                        {/* <LoginBtn onClick={handleLogin}/> */}
+                        <button onClick={handleLogin}>asdf</button>
                         
                     <div className="or-separator">
                         <div className="line"></div>

@@ -1,6 +1,6 @@
 interface LoginData{
     username:string;
-    password:string;
+    phone:string;
 }
 
 export async function loginUser(data:LoginData) {
@@ -11,7 +11,5 @@ export async function loginUser(data:LoginData) {
     });
     
     if(!response.ok) throw new Error("Login failed");
-    return response.json();    
-    
-    
+    return response.json();
 }

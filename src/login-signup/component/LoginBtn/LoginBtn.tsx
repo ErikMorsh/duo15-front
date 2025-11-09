@@ -1,8 +1,8 @@
-import '../login-signup/Loginpage.scss';
+// import '../login-signup/Loginpage.scss';
 import '../LoginBtn/LoginBtn.scss';
 
 interface props{
-    onClick: ()=>void
+    onClick: ()=> void
 }
 
 export default function LoginBtn({onClick}:props){
