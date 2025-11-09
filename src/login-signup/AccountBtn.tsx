@@ -1,4 +1,4 @@
-import '../login-signup/Loginpage.scss'
+import './component/LoginMainPage/Loginpage.scss'
 import googleIcon from './image/google.svg'
 import facebookIcon from './image/facebook.svg'
 

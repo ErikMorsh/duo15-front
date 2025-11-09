@@ -1,6 +1,6 @@
-import '../login-signup/Loginpage.scss'
+import './component/LoginBtn/LoginBtn.scss'
 import "./AgeSubmit.scss";
-import "./InputBox.scss";
+import "./component/InputBox/InputBox.scss";
 import { useState } from "react";
 import AccountBtn from "./AccountBtn";
 import closeIcon from "./image/close2.svg";
@@ -13,7 +13,7 @@ export default function AgeSignInput() {
     setValue("");
   };
 
-  const isNumberValid = value.trim() !== "" && !isNaN(value);
+  const isNumberValid = value.trim() !== "" && !isNaN(Number(value));
 
   return (
     <div className="input-container">

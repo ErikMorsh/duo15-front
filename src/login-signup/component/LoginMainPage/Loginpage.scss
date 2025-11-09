@@ -1,5 +1,5 @@
-@use "./InputBox.scss";
-@use './LoginPageBtn.scss';
+@use "../InputBox/InputBox.scss";
+// @use './Loginpage.scss';
 $bgColor : rgba(19, 31, 36, 1);
 $headerColor : rgba(241, 247, 251, 1);
 $footerTextColor : rgb(81, 100 , 108);

@@ -1,6 +1,6 @@
 
 import{Routes, Route } from "react-router-dom";
-import Loginpage from "./login-signup/Loginpage";
+import Loginpage from "./login-signup/component/LoginMainPage/Loginpage";
 import Signuppage from "./login-signup/Signup";
 
 function App() {

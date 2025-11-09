@@ -1,5 +1,5 @@
-@use './LoginPageBtn.scss';
-@use './Loginpage.scss';
+@use './component/LoginMainPage/Loginpage.scss';
+@use './component/LoginBtn/LoginBtn.scss';
 $btnFontColor: rgb(67, 173, 223);
 $primarybtnFontColor: rgb(225, 225, 225);
 $bgColor : rgb(17, 28, 32);
